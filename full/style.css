@@ -1,0 +1,141 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: rgb(212, 210, 210);
+	color: rgb(0, 0, 0);
+}
+
+header, nav {
+	background-color: rgb(133, 129, 124);
+	padding: 15px 30px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: rgb(212, 210, 210);
+	font-weight: bold;
+}
+.nav-links a:hover {
+	color: rgb(255, 255, 255);
+}
+
+.nav-links a.active {
+	color: rgb(255, 255, 255);
+}
+
+.articles {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	padding: 20px;
+	/* background-color: saddlebrown; */
+}
+
+@media (min-width: 768px) {
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+	.articles {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.card {
+	background-color: rgb(133, 129, 124);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+	width: 100%;
+	/* border: 5px solid rgb(212, 210, 210); */
+	border-radius: 10px;
+}
+
+.card:hover {
+	transform: scale(1.03);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: rgb(212, 210, 210);
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+	background-color: rgb(0, 0, 0);
+	color: rgb(212, 210, 210);
+}
+
+/* article */
+
+.art {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.art article h1 {
+	margin-top: 0;
+
+}
+
+.art article img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+article p {
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+article ol {
+	padding-left: 20px;
+}
+
+article a {
+	display: inline-block;
+	margin-top: 15px;
+	text-decoration: none;
+	color: rgb(153, 109, 109);
+}
+
+/* // */
+
+footer {
+	background-color: rgb(133, 129, 124);
+	padding: 15px 30px;
+	text-align: center;
+	color: rgb(212, 210, 210);
+	margin-top: 20px;
+}
